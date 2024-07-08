@@ -8,8 +8,8 @@
 ```bash 
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ``` -->
->### Install using the apt repository<br>
->1. Set up Docker's apt repository.<br>
+### Install using the apt repository<br>
+1. Set up Docker's apt repository.<br>
 ``` bash 
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -25,12 +25,12 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
->2. Install the Docker packages.
->To install the latest version, run:
+2. Install the Docker packages.
+To install the latest version, run:
 ``` bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin 
 ```
-> Set up on Windows or MacOS and go to [Docker](https://docs.docker.com/engine/install/) to use.<br>
+Set up on Windows or MacOS and go to [Docker](https://docs.docker.com/engine/install/) to use.<br>
 
 
 
@@ -40,7 +40,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 <!-- >***Install the necessary libraries:***<br> -->
 
 >***Set up when there is a new model:***<br>
->Create a .env file with content similar to the following<br>
+Create a .env file with content similar to the following<br>
 ``` bash 
 api_key=API_KEY
 model_name=/hf_models/ntq-trans-m2m-ja-vi-it-20062024
@@ -53,7 +53,7 @@ REDIS_PORT='0000'
 REDIS_PASSWORD='PASSWORD'
 ```
 
-> In `Docker-compose.yaml` change the `/hdd-6tb/vuhuy/JaViTranslate/model` path to the `New_path` to use the new translation model (`New_path` is the folder containing the translation model) <br>
+In `Docker-compose.yaml` change the `/hdd-6tb/vuhuy/JaViTranslate/model` path to the `New_path` to use the new translation model (`New_path` is the folder containing the translation model) <br>
 ```bash
     volumes:
       - ./:/app/
