@@ -33,7 +33,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 
 
-> [!TIP] 
+>[!TIP] 
 ### Set up when there is a new model:<br>
 #### Create a .env file with content similar to the following<br>
 ``` bash 
