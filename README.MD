@@ -34,11 +34,7 @@ Set up on Windows or MacOS and go to [Docker](https://docs.docker.com/engine/ins
 
 
 
-
-
-> [!NOTE]
-<!-- >***Install the necessary libraries:***<br> -->
-
+> [!TIP] 
 >***Set up when there is a new model:***<br>
 Create a .env file with content similar to the following<br>
 ``` bash 
@@ -60,7 +56,6 @@ In `Docker-compose.yaml` change the `/hdd-6tb/vuhuy/JaViTranslate/model` path to
       - {New_path}:/hf_models/
 ```
 
-> [!TIP] 
 >***Running the translation project: ***<br>
 ```bash 
 docker-compose up --build 
