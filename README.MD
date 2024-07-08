@@ -30,7 +30,6 @@ To install the latest version, run:
 ``` bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin 
 ```
-Set up on Windows or MacOS and go to [Docker](https://docs.docker.com/engine/install/) to use.<br>
 
 
 
