@@ -56,7 +56,7 @@ In `Docker-compose.yaml` change the `/hdd-6tb/vuhuy/JaViTranslate/model` path to
       - {New_path}:/hf_models/
 ```
 
->***Running the translation project: ***<br>
+### Running the translation project: 
 ```bash 
 docker-compose up --build 
 ```
