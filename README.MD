@@ -35,8 +35,8 @@ Set up on Windows or MacOS and go to [Docker](https://docs.docker.com/engine/ins
 
 
 > [!TIP] 
-### Set up when there is a new model:***<br>
-#### reate a .env file with content similar to the following<br>
+### Set up when there is a new model:<br>
+#### Create a .env file with content similar to the following<br>
 ``` bash 
 api_key=API_KEY
 model_name=/hf_models/ntq-trans-m2m-ja-vi-it-20062024
