@@ -4,8 +4,11 @@
 
 > [!IMPORTANT]
 >***Install the necessary libraries:***<br>
->``` bash pip install request ```<br>
->``` bash pip install beautifulsoup4 ```<br>
+``` bash 
+pip install request 
+pip install beautifulsoup4
+
+```
 
 > [!NOTE]
 >You need to provide a url_root (ex: https://fit.haui.edu.vn/vn ) to access. :shipit: <br>
