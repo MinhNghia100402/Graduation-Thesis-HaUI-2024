@@ -93,7 +93,7 @@ export function PromptForm({
 
     try {
       // Fetch response from the API
-      const response = await fetch('http://10.0.65.166:9999/query', {
+      const response = await fetch('http://10.0.65.166:9090/query', {
         method: 'POST',
         body: JSON.stringify({ message: value }),
         headers: {

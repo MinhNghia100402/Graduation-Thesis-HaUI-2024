@@ -25,6 +25,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - 3030:3045
+      - 3030:3000
     restart: always
-    entrypoint: /bin/sh
+    # entrypoint: /bin/sh
+    command: ["npm", "run", "dev"]
