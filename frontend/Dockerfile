@@ -1,6 +1,8 @@
-FROM node:18.18.1
-# ENV NODE_VERSION 22.8.0
+FROM node:18-alpine3.20
 
-COPY . /app/
+WORKDIR /app
+COPY package*.json ./
+COPY . .
+
 RUN npm install
-RUN npm run dev
+CMD ["npm", "run", "dev"]
