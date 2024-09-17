@@ -1,0 +1,30 @@
+version: "3"
+services:
+  haui-chat_backend:
+    container_name: haui-chat-backend
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    ports:
+      - 9090:9999
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0,1
+    volumes:
+      - ./backend/databases/:/app/databases/
+      - ./backend/datasets/:/app/datasets/
+      - ./model/:/app/model/
+    restart: always
+    env_file:
+      ./backend/.env
+    entrypoint: /bin/sh
+    command: -c "ls -l /app/scripts && bash /app/scripts/start.sh"
+  haui-chat_frontend:
+    container_name: haui-chat-fronend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3030:3045
+    restart: always
+    entrypoint: /bin/sh
