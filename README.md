@@ -51,8 +51,8 @@ cp .env_example .env
 cd Graduation-Thesis-HaUI-2024/backend/
 bash scripts/vector_store.sh
 ```
-
-> #### Correctly edit the parameter paths in the `/backend/.env` file to be able to use the program.
+> [!WARNING]
+> Correctly edit the parameter paths in the `/backend/.env` file to be able to use the program.
 
 
 > [!TIP] 
