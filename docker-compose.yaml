@@ -1,10 +1,11 @@
 version: "3"
 services:
-  haui-chat_backend:
+  haui-chat-backend:
     container_name: haui-chat-backend
     build:
       context: ./backend/
       dockerfile: Dockerfile
+    image: haui_chat_be
     ports:
       - 9090:9999
     runtime: nvidia
@@ -16,16 +17,29 @@ services:
       - ./model/:/app/model/
     restart: always
     env_file:
-      ./backend/.env
+      - ./backend/.env
     entrypoint: /bin/sh
     command: -c "ls -l /app/scripts && bash /app/scripts/start.sh"
-  haui-chat_frontend:
-    container_name: haui-chat-fronend
+    networks:
+      - haui_chat_be_net
+
+  haui-chat-frontend:
+    container_name: haui-chat-frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    image: haui_chat_fe
     ports:
       - 3030:3000
     restart: always
-    # entrypoint: /bin/sh
     command: ["npm", "run", "dev"]
+    networks:
+      - haui_chat_be_net
+
+networks:
+  haui_chat_be_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.100.0/24 
